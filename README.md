@@ -1,6 +1,9 @@
 # MediParse.AI 🏥 🤖
 
-![MediParse Banner](https://via.placeholder.com/1200x400?text=MediParse.AI+Dashboard+Preview)
+<div align="center">
+  <img src="docs/readme/banner.png" alt="MediParse.AI Banner" width="100%" />
+</div>
+
 
 > **Next-Gen Medical Document Extraction & Analysis powered by Gemini 2.5**
 
