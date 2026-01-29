@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#grad)"/>
+
+  <!-- Medical AI Cross -->
+  <rect x="28" y="16" width="8" height="32" rx="3" fill="white"/>
+  <rect x="16" y="28" width="32" height="8" rx="3" fill="white"/>
+
+  <!-- AI nodes -->
+  <circle cx="32" cy="16" r="2.5" fill="white"/>
+  <circle cx="32" cy="48" r="2.5" fill="white"/>
+  <circle cx="16" cy="32" r="2.5" fill="white"/>
+  <circle cx="48" cy="32" r="2.5" fill="white"/>
+</svg>
