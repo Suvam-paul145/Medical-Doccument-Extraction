@@ -108,6 +108,75 @@ Follow these steps to set up the project locally.
 
 5.  Open your browser and navigate to `http://localhost:5173`.
 
+## ☁️ Deploy on Vercel
+
+Deploy MediParse.AI to [Vercel](https://vercel.com) for a fast, production-ready hosting solution.
+
+### One-Click Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Suvam-paul145/Medical-Doccument-Extraction&env=VITE_GEMINI_API_KEY&envDescription=Your%20Google%20Gemini%20API%20Key&project-name=mediparse-ai&repository-name=mediparse-ai)
+
+### Manual Deployment Steps
+
+1.  **Push your code to GitHub** (if not already done)
+
+2.  **Go to [Vercel](https://vercel.com)** and sign in with your GitHub account
+
+3.  **Import your repository**
+    - Click **"Add New..."** → **"Project"**
+    - Select the `Medical-Doccument-Extraction` repository
+    - Click **"Import"**
+
+4.  **Configure Build Settings** (auto-detected, but verify):
+
+    | Setting | Value |
+    | :--- | :--- |
+    | **Framework Preset** | `Vite` |
+    | **Build Command** | `npm run build` |
+    | **Output Directory** | `dist` |
+    | **Install Command** | `npm install` |
+
+5.  **Add Environment Variables**
+    - Click **"Environment Variables"**
+    - Add the following:
+      | Name | Value |
+      | :--- | :--- |
+      | `VITE_GEMINI_API_KEY` | `your_actual_api_key_here` |
+    
+    > ⚠️ **Note**: Variables prefixed with `VITE_` are exposed in the client bundle. Only use API keys meant for client-side access.
+
+6.  **Deploy**
+    - Click **"Deploy"**
+    - Wait for the build to complete (usually 1-2 minutes)
+    - Your app will be live at `https://your-project-name.vercel.app`
+
+### Vercel CLI Deployment
+
+If you prefer using the command line:
+
+```bash
+# Install Vercel CLI globally
+npm install -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy (follow the prompts)
+vercel
+
+# For production deployment
+vercel --prod
+```
+
+### Build Command Summary
+
+| Command | Description |
+| :--- | :--- |
+| `npm install` | Install all dependencies |
+| `npm run build` | Build for production (outputs to `dist/`) |
+| `npm run dev` | Start development server |
+| `npm run preview` | Preview production build locally |
+
 ## 🗺️ Roadmap
 
 - [x] Image Upload & Validation
