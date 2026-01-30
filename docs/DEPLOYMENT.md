@@ -57,7 +57,7 @@ dist/
 
 Click the button below to deploy instantly:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Suvam-paul145/Medical-Doccument-Extraction&env=VITE_GEMINI_API_KEY&envDescription=Your%20Google%20Gemini%20API%20Key&project-name=mediparse-ai&repository-name=mediparse-ai)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Suvam-paul145/Medical-Doccument-Extraction&env=GEMINI_API_KEY&envDescription=Your%20Google%20Gemini%20API%20Key&project-name=mediparse-ai&repository-name=mediparse-ai)
 
 ### Method 2: Vercel Dashboard
 
@@ -88,7 +88,7 @@ Click the button below to deploy instantly:
    
    | Key | Value | Environment |
    | :--- | :--- | :--- |
-   | `VITE_GEMINI_API_KEY` | Your API key | Production, Preview, Development |
+   | `GEMINI_API_KEY` | Your API key | Production, Preview, Development |
 
 5. **Deploy**
    - Click **"Deploy"**
@@ -139,7 +139,7 @@ Once connected to Vercel:
 
 | Variable | Description | Example |
 | :--- | :--- | :--- |
-| `VITE_GEMINI_API_KEY` | Your Google Gemini API key | `AIzaSy...` |
+| `GEMINI_API_KEY` | Your Google Gemini API key | `AIzaSy...` |
 
 ### Getting a Gemini API Key
 
@@ -151,7 +151,7 @@ Once connected to Vercel:
 
 ### Security Notes
 
-⚠️ **Important**: Environment variables prefixed with `VITE_` are exposed to the client-side bundle. Never store sensitive backend secrets in `VITE_` variables.
+⚠️ **Important**: The `GEMINI_API_KEY` environment variable is exposed to the client-side bundle. Never store sensitive backend secrets in environment variables that are exposed to the client.
 
 ---
 
@@ -176,7 +176,7 @@ npm install
 
 **App shows blank page**
 - Check browser console for errors
-- Verify `VITE_GEMINI_API_KEY` is set correctly
+- Verify `GEMINI_API_KEY` is set correctly
 - Ensure the API key has proper permissions
 
 **API calls fail**
