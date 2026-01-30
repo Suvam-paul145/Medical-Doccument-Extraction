@@ -4,9 +4,17 @@ Use these descriptions and settings to optimize your GitHub repository visibilit
 
 ---
 
+## 📝 Quick About Setup (Right Panel)
+
+Use this concise setup for the GitHub "About" panel:
+
+- **Description (recommended):** `🏥 AI-powered medical document extraction using Google Gemini 2.5. Extract prescriptions, lab reports & clinical notes to structured JSON.`
+- **Website:** `https://medi-parse-your-personal-medical-as.vercel.app/`
+- **Topics (fewer keywords):** `medical-ai`, `document-extraction`, `ocr`, `react`, `gemini`
+
 ## 📝 Repository Description Options
 
-Choose one of these descriptions for your GitHub repository "About" section:
+Choose one of these descriptions for your GitHub repository "About" section if you want variations:
 
 ### Option 1: Concise (Recommended)
 ```
@@ -62,10 +70,10 @@ computer-vision
 
 ## 🔗 Website URL
 
-After deploying to Vercel, add your live demo URL:
+Live demo:
 
 ```
-https://your-project-name.vercel.app
+https://medi-parse-your-personal-medical-as.vercel.app/
 ```
 
 ---
@@ -79,12 +87,12 @@ https://your-project-name.vercel.app
 
 **Website:**
 ```
-https://mediparse-ai.vercel.app
+https://medi-parse-your-personal-medical-as.vercel.app/
 ```
 
 **Topics:**
 ```
-medical, healthcare, ai, gemini, ocr, react, typescript, vite, tailwindcss, document-extraction
+medical-ai, document-extraction, ocr, react, gemini
 ```
 
 ---
