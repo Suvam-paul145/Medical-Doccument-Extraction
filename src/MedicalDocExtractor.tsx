@@ -142,7 +142,11 @@ export default function MedicalDocExtractor() {
         }, 2000);
 
         try {
-            const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Runtime Environment
+            const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+            
+            if (!apiKey) {
+                throw new Error("API key is not configured. Please set VITE_GEMINI_API_KEY in your environment variables.");
+            }
 
             // 2. Prepare Image for API
             const imagePart = await fileToGenerativePart(file);
@@ -277,7 +281,14 @@ export default function MedicalDocExtractor() {
         setActiveGeminiMode(mode);
         setGeminiResult(null);
 
-        const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Runtime Environment
+        const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+        
+        if (!apiKey) {
+            setGeminiResult("Error: API key is not configured. Please set VITE_GEMINI_API_KEY in your environment variables.");
+            setIsGeminiLoading(false);
+            return;
+        }
+        
         const context = JSON.stringify(result);
 
         let systemPrompt = "";
@@ -362,6 +373,14 @@ export default function MedicalDocExtractor() {
         setVoiceTranscript(""); // Clear transcript for UI
 
         const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+        
+        if (!apiKey) {
+            const errorMsg = "API key is not configured. Please set up the VITE_GEMINI_API_KEY environment variable.";
+            setChatHistory(prev => [...prev, { role: 'ai', text: errorMsg }]);
+            speakResponse(errorMsg);
+            return;
+        }
+        
         const context = JSON.stringify(result); // Medical context
         const prompt = `You are a helpful medical voice assistant. The user is asking about their extracted medical data: ${context}. 
                         User Question: "${query}". 
