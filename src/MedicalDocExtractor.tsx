@@ -284,7 +284,7 @@ export default function MedicalDocExtractor() {
         const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
         
         if (!apiKey) {
-            setGeminiResult("Error: API key is not configured. Please set VITE_GEMINI_API_KEY in your environment variables.");
+            setGeminiResult("API key is not configured. Please set VITE_GEMINI_API_KEY in your environment variables.");
             setIsGeminiLoading(false);
             return;
         }
@@ -375,7 +375,7 @@ export default function MedicalDocExtractor() {
         const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
         
         if (!apiKey) {
-            const errorMsg = "API key is not configured. Please set up the VITE_GEMINI_API_KEY environment variable.";
+            const errorMsg = "API key is not configured. Please set VITE_GEMINI_API_KEY in your environment variables.";
             setChatHistory(prev => [...prev, { role: 'ai', text: errorMsg }]);
             speakResponse(errorMsg);
             return;
