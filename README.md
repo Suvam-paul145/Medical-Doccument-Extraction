@@ -99,7 +99,7 @@ Follow these steps to set up the project locally.
 3.  **Configure Environment Variables**
     Create a `.env` file in the root directory and add your Gemini API key:
     ```env
-    VITE_GEMINI_API_KEY=your_actual_api_key_here
+    GEMINI_API_KEY=your_actual_api_key_here
     ```
 
 4.  **Run the development server**
@@ -115,7 +115,7 @@ Deploy MediParse.AI to [Vercel](https://vercel.com) for a fast, production-ready
 
 ### One-Click Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Suvam-paul145/Medical-Doccument-Extraction&env=VITE_GEMINI_API_KEY&envDescription=Your%20Google%20Gemini%20API%20Key&project-name=mediparse-ai&repository-name=mediparse-ai)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Suvam-paul145/Medical-Doccument-Extraction&env=GEMINI_API_KEY&envDescription=Your%20Google%20Gemini%20API%20Key&project-name=mediparse-ai&repository-name=mediparse-ai)
 
 ### Manual Deployment Steps
 
@@ -142,9 +142,9 @@ Deploy MediParse.AI to [Vercel](https://vercel.com) for a fast, production-ready
     - Add the following:
       | Name | Value |
       | :--- | :--- |
-      | `VITE_GEMINI_API_KEY` | `your_actual_api_key_here` |
+      | `GEMINI_API_KEY` | `your_actual_api_key_here` |
     
-    > ⚠️ **Note**: Variables prefixed with `VITE_` are exposed in the client bundle. Only use API keys meant for client-side access.
+    > ⚠️ **Note**: The `GEMINI_API_KEY` variable is exposed in the client bundle via the Vite `envPrefix` configuration. Only use API keys meant for client-side access.
 
 6.  **Deploy**
     - Click **"Deploy"**
