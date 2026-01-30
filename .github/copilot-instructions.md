@@ -71,8 +71,7 @@ src/
 
 ## Environment Variables
 
-- `VITE_GEMINI_API_KEY` - Required for AI functionality (client-side exposed)
-- All environment variables for Vite must be prefixed with `VITE_`
+- `GEMINI_API_KEY` - Required for AI functionality (client-side exposed via `envPrefix` in vite.config.ts)
 
 ## Architecture Principles
 
@@ -120,7 +119,7 @@ The application follows a 6-stage processing pipeline:
 - **Platform**: Vercel (configured via `vercel.json`)
 - **Build Command**: `npm run build`
 - **Output Directory**: `dist`
-- **Environment**: Remember to set `VITE_GEMINI_API_KEY` in Vercel
+- **Environment**: Remember to set `GEMINI_API_KEY` in Vercel
 
 ## Security Considerations
 
@@ -151,7 +150,7 @@ The application follows a 6-stage processing pipeline:
 
 ### Modifying AI Integration
 - All Gemini API calls are in `MedicalDocExtractor.tsx`
-- Use the `VITE_GEMINI_API_KEY` environment variable
+- Use the `GEMINI_API_KEY` environment variable
 - Handle API errors gracefully
 - Maintain the processing stage visualization
 
