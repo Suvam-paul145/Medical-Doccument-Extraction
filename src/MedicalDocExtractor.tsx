@@ -142,7 +142,7 @@ export default function MedicalDocExtractor() {
         }, 2000);
 
         try {
-            const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Runtime Environment
+            const apiKey = import.meta.env.GEMINI_API_KEY; // Runtime Environment
 
             // 2. Prepare Image for API
             const imagePart = await fileToGenerativePart(file);
@@ -277,7 +277,7 @@ export default function MedicalDocExtractor() {
         setActiveGeminiMode(mode);
         setGeminiResult(null);
 
-        const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Runtime Environment
+        const apiKey = import.meta.env.GEMINI_API_KEY; // Runtime Environment
         const context = JSON.stringify(result);
 
         let systemPrompt = "";
@@ -361,7 +361,7 @@ export default function MedicalDocExtractor() {
         setChatHistory(newHistory);
         setVoiceTranscript(""); // Clear transcript for UI
 
-        const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+        const apiKey = import.meta.env.GEMINI_API_KEY;
         const context = JSON.stringify(result); // Medical context
         const prompt = `You are a helpful medical voice assistant. The user is asking about their extracted medical data: ${context}. 
                         User Question: "${query}". 
