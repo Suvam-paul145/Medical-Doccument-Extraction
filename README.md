@@ -4,13 +4,14 @@
   <img src="docs/readme/banner.png" alt="MediParse.AI Banner" width="100%" />
 </div>
 
-
-> **Next-Gen Medical Document Extraction & Analysis powered by Gemini 2.5**
+> **Next-Gen Medical Document Extraction & Analysis powered by Gemini 2.5**  
+> Live demo: https://medi-parse-your-personal-medical-as.vercel.app/
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-19.0-blue)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-7.0-646CFF)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC)](https://tailwindcss.com/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-medi--parse-blueviolet)](https://medi-parse-your-personal-medical-as.vercel.app/)
 [![Gemini AI](https://img.shields.io/badge/AI-Gemini%202.5-8E75B2)](https://deepmind.google/technologies/gemini/)
 
 ## 📋 Overview
