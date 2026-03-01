@@ -24,6 +24,7 @@ import {
     MicOff,
     Volume2
 } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 /**
  * PROCESSING STAGES
@@ -285,7 +286,17 @@ export default function MedicalDocExtractor() {
 
         if (mode === 'explain') {
             systemPrompt = "You are a compassionate medical assistant. Explain medical data to a patient in simple, reassuring, plain English.";
-            userPrompt = `Based on this extracted data: ${context}. Provide a friendly summary for the patient. Explain the medications (what they treat) and diagnosis codes in simple terms. Use bullet points.`;
+            userPrompt = `Based on this extracted data: ${context}.
+
+Provide your response using the following markdown structure:
+
+## ✨ Plain English Breakdown
+
+Explain the medications (what they treat), diagnosis codes, and key findings in simple, friendly terms. Use bullet points for clarity.
+
+## ✨ Safety & Side Effects
+
+Provide important safety information, common side effects, and any warnings the patient should know about their medications and conditions.`;
         } else {
             systemPrompt = "You are a clinical pharmacist AI. Identify drug interactions.";
             userPrompt = `Analyze this data: ${context}. 1. Check for drug-drug interactions. 2. Check dose appropriateness if possible. 3. Return a safety assessment. Be concise.`;
@@ -716,7 +727,7 @@ export default function MedicalDocExtractor() {
                                                     </button>
                                                 </div>
                                                 <div className="prose prose-sm max-w-none text-slate-700">
-                                                    <p className="whitespace-pre-line leading-relaxed">{geminiResult}</p>
+                                                    <ReactMarkdown>{geminiResult}</ReactMarkdown>
                                                 </div>
                                                 <div className="mt-3 flex items-center gap-1 text-[10px] text-slate-400 uppercase tracking-widest font-medium">
                                                     <Sparkles className="w-3 h-3" /> Powered by Gemini 2.5
